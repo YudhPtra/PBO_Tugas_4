@@ -1,8 +1,9 @@
 # PBO_Tugas_4
 
-/* Kelas NumberDisplay merepresentasikan tampilan angka digital yang dapat menyimpan nilai dari nol hingga batas yang diberikan. Batas tersebut dapat 
+`````
+ * Kelas NumberDisplay merepresentasikan tampilan angka digital yang dapat menyimpan nilai dari nol hingga batas yang diberikan. Batas tersebut dapat 
  * ditentukan saat membuat tampilan. Nilai berkisar dari nol (inklusif) hingga batas-1. Jika digunakan, misalnya, untuk detik pada jam digital, batasnya 
- * adalah 60, sehingga menghasilkan nilai tampilan dari 0 hingga 59. Ketika ditambah, tampilan otomatis kembali ke nol saat mencapai batas.*/
+ * adalah 60, sehingga menghasilkan nilai tampilan dari 0 hingga 59. Ketika ditambah, tampilan otomatis kembali ke nol saat mencapai batas.
 
 public class NumberDisplay{
     private int batas;
@@ -40,12 +41,14 @@ public class NumberDisplay{
         nilai = (nilai + 1) % batas;
     }
 }
+`````
 
-/* Jam ini menampilkan jam dan menit. Rentang waktunya adalah 00:00 (tengah malam) hingga 23:59 (satu menit sebelum tengah malam).
+ * Jam ini menampilkan jam dan menit. Rentang waktunya adalah 00:00 (tengah malam) hingga 23:59 (satu menit sebelum tengah malam).
  * Tampilan jam menerima "tanda detik" (melalui metode timeTick) setiap menit
  * dan bereaksi dengan menambah tampilan. Ini dilakukan dengan cara jam biasa:
- * jam bertambah ketika menit kembali ke nol. */
+ * jam bertambah ketika menit kembali ke nol.
 
+`````
 public class ClockDisplay {
     private NumberDisplay jam;
     private NumberDisplay menit;
@@ -91,3 +94,4 @@ public class ClockDisplay {
         stringTampilan = jam.getNilaiTampilan() + ":" + menit.getNilaiTampilan();
     }
 }
+`````
